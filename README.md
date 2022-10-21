@@ -1,2 +1,2 @@
 # java-playwright-cucumber
-Project to study tests
+Try to use Playwright and Cucumber with Java

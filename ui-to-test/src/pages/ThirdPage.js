@@ -1,10 +1,14 @@
 import React, {useEffect, useState} from 'react';
-import './FirstPage.css';
+import './Page.css';
 import Preloader from "../common/Preloader";
+import {useLocation, useNavigate} from "react-router-dom";
 
 function ThirdPage() {
 
     const [loading, setLoading] = useState(true);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const currentPath = location.pathname;
 
     const stopLoading = () => {
         setLoading(false);
@@ -22,7 +26,22 @@ function ThirdPage() {
     if (loading) {
         return <Preloader/>;
     } else {
-        return <div>Third page</div>
+        return <div className="vertical-center horizontal-center">
+            <div>Third page</div>
+            <br/>
+            <button onClick={() => navigate(currentPath.replace("thirdPage", "firstPage"))}>
+                <div>
+                    GO TO FIRST PAGE
+                </div>
+            </button>
+            <br/>
+            <br/>
+            <button onClick={() => navigate(currentPath.replace("thirdPage", "secondPage"))}>
+                <div>
+                    GO TO SECOND PAGE
+                </div>
+            </button>
+        </div>
     }
 }
 

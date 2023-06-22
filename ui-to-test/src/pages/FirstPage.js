@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import './FirstPage.css';
+import './Page.css';
 import Preloader from "../common/Preloader";
 import {useLocation, useNavigate} from "react-router-dom";
 
@@ -26,7 +26,7 @@ function FirstPage() {
     if (loading) {
         return <Preloader/>;
     } else {
-        return <div class="vertical-center">
+        return <div class="vertical-center horizontal-center">
             <div>First page</div>
             <br/>
             <button onClick={() => navigate(currentPath.replace("firstPage", "secondPage"))}>

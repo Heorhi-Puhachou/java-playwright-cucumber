@@ -8,3 +8,4 @@
 /playwright-java.iml
 /ui-tests/target/
 /ui-to-test/.gitignore
+/ui-to-test/ui-to-test.iml

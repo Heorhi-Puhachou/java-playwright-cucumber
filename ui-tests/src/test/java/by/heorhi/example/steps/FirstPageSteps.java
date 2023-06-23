@@ -7,7 +7,7 @@ public class FirstPageSteps {
 
     private static final FirstPage firstPage = new FirstPage();
 
-    @Given("first page loaded")
+    @Given("load first page")
     public void loadFirstPage() {
         firstPage.openPage();
         String test2 = "just for debug";

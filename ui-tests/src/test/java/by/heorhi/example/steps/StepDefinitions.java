@@ -1,4 +1,4 @@
-package hellocucumber;
+package by.heorhi.example.steps;
 
 import io.cucumber.java.en.*;
 

@@ -22,4 +22,16 @@ public class CommonSteps {
         String textElementLocator = "text=" + text;
         getPage().waitForSelector(textElementLocator);
     }
+
+    @Then("button {string} is visible")
+    public void checkButtonVisible(String text) {
+        String textElementLocator = "button >> text=" + text;
+        getPage().waitForSelector(textElementLocator);
+    }
+
+    @Then("click button {string}")
+    public void clickButton(String text) {
+        String textElementLocator = "button >> text=" + text;
+        getPage().waitForSelector(textElementLocator).click();
+    }
 }

@@ -1,0 +1,7 @@
+services:
+  ui:
+    container_name: ui-to-test-container
+    build: ./ui-to-test
+    image: ui-to-test-image
+    ports:
+      - "3000:3000"

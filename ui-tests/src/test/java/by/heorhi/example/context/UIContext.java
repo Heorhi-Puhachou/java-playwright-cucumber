@@ -3,12 +3,21 @@ package by.heorhi.example.context;
 import com.microsoft.playwright.BrowserContext;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
 
-@Component
-@Scope("cucumber-glue")
+
 public class UIContext {
+
+    private static UIContext instance;
+
+    private UIContext() {
+    }
+
+    public static UIContext getInstance() {
+        if (instance == null) {
+            instance = new UIContext();
+        }
+        return instance;
+    }
 
     private Playwright playwright;
     private Page page;

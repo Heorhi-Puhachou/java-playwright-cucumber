@@ -1,6 +1,7 @@
-Feature: First page
+Feature: An example
 
-  Scenario: Check all elements on first page
+  @browser
+  Scenario: The example
     Given an example scenario
     When all step definitions are implemented
     Then the scenario passes

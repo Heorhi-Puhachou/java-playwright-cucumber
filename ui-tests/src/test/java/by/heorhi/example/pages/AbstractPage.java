@@ -10,7 +10,7 @@ public class AbstractPage {
     protected void navigateFromBaseUrl(String pagePath) {
         Page page = getPage();
         String pageUrl = BASE_URL + pagePath;
-        page.waitForNavigation(() -> page.navigate(pageUrl));
+        page.navigate(pageUrl);
     }
 
     protected Page getPage() {

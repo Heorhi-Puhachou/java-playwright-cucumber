@@ -41,6 +41,15 @@ function SecondPage() {
                     GO TO THIRD PAGE
                 </div>
             </button>
+            <br/>
+            <br/>
+            <input/>
+            <br/>
+            <br/>
+            <input/>
+            <br/>
+            <br/>
+            <input/>
         </div>
     }
 }

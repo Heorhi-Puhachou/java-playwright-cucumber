@@ -10,7 +10,5 @@ public class FirstPageSteps {
     @Given("load first page")
     public void loadFirstPage() {
         firstPage.openPage();
-        String test2 = "just for debug";
     }
-
 }

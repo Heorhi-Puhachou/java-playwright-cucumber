@@ -1,4 +1,4 @@
-Feature: An example
+Feature: An example 2
 
   @browser
   Scenario: The example

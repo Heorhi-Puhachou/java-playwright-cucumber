@@ -11,7 +11,7 @@ public class SecondPageSteps {
     private static final SecondPage secondPage = new SecondPage();
 
     @Given("load second page")
-    public void loadFirstPage() {
+    public void loadSecondPage() {
         secondPage.openPage();
     }
 

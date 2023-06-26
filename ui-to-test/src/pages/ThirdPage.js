@@ -41,6 +41,25 @@ function ThirdPage() {
                     GO TO SECOND PAGE
                 </div>
             </button>
+            <br/>
+            <br/>
+            <div test-locator="list-with-name">
+                <div test-locator="list-name">LIST NAME</div>
+                <ul>
+                    <li>
+                        <div test-locator="position">1</div>
+                        <div test-locator="value">First value</div>
+                    </li>
+                    <li>
+                        <div test-locator="position">2</div>
+                        <div test-locator="value">Second value</div>
+                    </li>
+                    <li>
+                        <div test-locator="position">3</div>
+                        <div test-locator="value">Third value</div>
+                    </li>
+                </ul>
+            </div>
         </div>
     }
 }

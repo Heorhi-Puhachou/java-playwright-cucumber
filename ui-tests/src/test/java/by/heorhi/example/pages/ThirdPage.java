@@ -22,7 +22,13 @@ public class ThirdPage extends AbstractPage {
         for (Map<String, String> row : rows) {
             String position = row.get("position");
             String value = row.get("value");
-            List<ElementHandle> elementsForRow = listToCheck.querySelectorAll("li >> div[test-locator='position'] >> text=" + position + ">> .. >>div[test-locator='value'] >> text=" + value);
+            String rowSelector = "li " +
+                    ">> div[test-locator='position'] " +
+                    ">> text=" + position +
+                    ">> .. " +
+                    ">> div[test-locator='value'] " +
+                    ">> text=" + value;
+            List<ElementHandle> elementsForRow = listToCheck.querySelectorAll(rowSelector);
             assertEquals(1, elementsForRow.size());
         }
     }

@@ -18,7 +18,6 @@ public class BeforeHook {
         UIContext uiContext = UIContext.getInstance();
         uiContext.setPlaywright(Playwright.create());
         BrowserType.LaunchOptions browserOptions = new BrowserType.LaunchOptions()
-                .setArgs(Arrays.asList("--use-fake-ui-for-media-stream", "--use-fake-device-for-media-stream"))
                 .setHeadless(HEADLESS);
         Browser browser = uiContext.getPlaywright().chromium().launch(browserOptions);
         BrowserContext browserContext = browser.newContext();

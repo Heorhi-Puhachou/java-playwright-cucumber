@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import './Page.css';
 import Preloader from "../common/Preloader";
 import {useLocation, useNavigate} from "react-router-dom";
+import NavigateButton from "../common/NavigateButton";
 
 function SecondPage() {
 
@@ -26,30 +27,41 @@ function SecondPage() {
     if (loading) {
         return <Preloader/>;
     } else {
-        return <div className="vertical-center horizontal-center">
-            <div>Second page</div>
-            <br/>
-            <button onClick={() => navigate(currentPath.replace("secondPage", "firstPage"))}>
-                <div>
-                    GO TO FIRST PAGE
+        return <div className="container">
+            <div className="header">
+                <div className="height-stub"/>
+                <div className="centered-text">Second page</div>
+                <div className="height-stub"/>
+            </div>
+            <div className="wrapper clearfix info">
+                <div className="nav">
+                    <ul>
+                        <li>
+                            <NavigateButton from="secondPage" to="firstPage" text="GO TO FIRST PAGE"/>
+                        </li>
+                        <br/>
+                        <li>
+                            <NavigateButton from="secondPage" to="thirdPage" text="GO TO THIRD PAGE"/>
+                        </li>
+                    </ul>
                 </div>
-            </button>
-            <br/>
-            <br/>
-            <button onClick={() => navigate(currentPath.replace("secondPage", "thirdPage"))}>
-                <div>
-                    GO TO THIRD PAGE
+                <div className="section">
+                    <br/>
+                    <br/>
+                    <input/>
+                    <br/>
+                    <br/>
+                    <input/>
+                    <br/>
+                    <br/>
+                    <input/>
                 </div>
-            </button>
-            <br/>
-            <br/>
-            <input/>
-            <br/>
-            <br/>
-            <input/>
-            <br/>
-            <br/>
-            <input/>
+            </div>
+            <div className="footer">
+                <div className="height-stub"/>
+                <div className="centered-text">UI example</div>
+                <div className="height-stub"/>
+            </div>
         </div>
     }
 }

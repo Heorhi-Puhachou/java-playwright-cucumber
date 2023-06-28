@@ -26,6 +26,10 @@ public class ThirdPageSteps {
         assertEquals(1, listsByName.size());
         ElementHandle listToCheck = listsByName.get(0);
         List<Map<String, String>> rows = dataTable.asMaps(String.class, String.class);
+
+        //Call bad method
+        thirdPage.badCheckListElements(listToCheck, rows);
+        //Call not so bad method
         thirdPage.checkListElements(listToCheck, rows);
     }
 }
